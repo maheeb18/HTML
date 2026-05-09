@@ -1,58 +1,34 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE >
+<html lang="en">
 <head>
-<style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0D1117;
-    color: #C9D1D9;
+<meta charset="UTF-8">
+<title>CSS Box Model Example</title>
+<style type="text/css">
+.example1 {
+    width:220px;
+    background-color: yellow;
+    padding:0px;
+    border:0px;
+    margin:0px;
 }
-h1 {
-    color: #58A6FF;
+.example2 {
+    width:220px;
+    background-color: green;
+    padding:50px;
+    border:5px solid black;
+    margin:40px 20x;
 }
-a {
-    color: #8B949E;
-    text-decoration: NONE;
-}
-ul>li {
-font-weight: bold;
-}
-h1 + p {
-    background-color: #161B22;
-    padding: 10px;
-    border-radius: 5px;
-}
-ul li:hover {
-    color: #4F8CC9;
-}
-ul li:nth-child(3) {
-    background-color: #21262D;
-}
-p:not(:first-of-type) {
-    text-decoration: underline;
-}
-ul li::before {
-    content: "";
-}
-p::first-letter {
-font-size: 200%;
-color: #FF7B72
+hr{
+    background-color: red;
 }
 </style>
 </head>
 <body>
-<h1>Welcome to the Space Explorer's Club</h1>
-<ul>
-<li>Moon Missions</li>
-<li>Mars Rovers</li>
-<li>International Space Station</li>
-<li>Telescopes and Stars</li>
-<li>Black Holes Mysteries</li>
-</ul>
-<p>Space exploration has always captivated human imagination. It's a journey to the unknown!</p>
-<p>From the Moon to distant galaxies, we continue to explore the vastness of space.</p>
-<a href="#">Join our Mission</a>
-<a href="#">Latest Space News</a>
-<a href="#">Gallery of the Universe</a>
+<h1>Box Model Example</h1>
+<hr>
+<p class="example1">My Content Example 1</p>
+<hr style="width: 10%; height: 10px; color: blue;">
+<p class="example2">My Content Example 2</p>
+<hr style="width: 20%; height: 1px; color: blue;">
 </body>
 </html>
