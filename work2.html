@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" <>
-
-<head>
-    <title>Bootstrap Jumbotron</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
-</head>
+<html>
+<head></head>
 <body>
-<div class="container">
-<h2>Spinners</h2>
-<p>To create a spinner/loader, use the <code>.spinner-border</code> class:</p>
-<div class="spinner-border"></div>
-</div>
+<p>A function can access variables defined inside the function. </p> 
+<button type="button" onclick="myFunction()">Click Me!</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+var b = 5;
+function myFunction() {
+    var a = 4;
+ document.getElementById("demo").innerHTML = b * a;
+}
+
+document.getElementById("demo2").innerHTML = b;
+</script>
 </body>
 </html>

@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"<>
-<head>
-<title>Bootstrap Jumbotron</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-</script>
-</head>
+<html>
+<head></head>
 <body>
-<h1 style="color:orange; text-align: center;">Coding</h1>
-<div class="container">
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="barou-shoei-1103242.jpg" alt="Card image">
-    <div class="card-body">
-        <h5 class="card-title">User Name</h5>
-        <p class="card-text">Passionate about programming.</p>
-        <a href="#" class="btn btn-primary">See Profile</a>
-    </div>
-</div>
-</div>
+<button onclick="myfunction(5)">Execute JS Function</button>
+<script>
+function myfunction(x, y) {
+    if (y === undefined) {
+        y = 10; // Default value for y
+    }
+    document.write(x*y);
+}
+</script>
 </body>
+</html>
