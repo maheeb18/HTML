@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Variables</h1>
-<p>Sum of two Numbers</p>
-<p id="result"></p>
-<script>
-var num1 = 5;
-var num2 = 6;
-var sum = num1 + num2;
-document.getElementById("result").innerHTML = "The total sum is: " + sum;
-</script>
+    <h2>JavaScript For Loop</h2>
+    <p id="demo"></p>
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango", "Pineapple", "Grapes"];
+    var text = "";
+    var i;
+    for (i = 0; i < fruits.length; i++) {
+        text += fruits[i] + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    </script>
 </body>
 </html>
