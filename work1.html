@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head></head>
-<body>
-<button onclick="myfunction(5)">Execute JS Function</button>
-<script>
-function myfunction(x, y) {
-    if (y === undefined) {
-        y = 10; // Default value for y
-    }
-    document.write(x*y);
-}
-</script>
-</body>
+    <body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+    // My heading
+    document.getElementById("myH").innerHTML = "Javascript Comments";
+    // My paragraph
+    document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script>
+    </body>
 </html>
