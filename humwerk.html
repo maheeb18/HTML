@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var choice = prompt("Welcome to Perimeter Calculator. \n Please Enter your Choice. \n1.Perimeter of Rectangle. \n2.Perimeter of Triangle. \n3.Perimeter of Circle. \n4.Perimeter of Parallelogram");
+        if (choice == '1') {
+            var l = prompt('Enter the Length.')
+            var b = prompt('Enter the Breadth.')
+            var result = 2 * (Number(l) + Number(b))
+            alert('The Perimeter is: ' + result)
+        }
+        if (choice == '2') {
+            var h = prompt('Enter the Height.')
+            var b = prompt('Enter the Base.')
+            var result = Number(h) + Number(b) + Math.sqrt(Math.pow(Number(h), 2) + Math.pow(Number(b), 2))
+            alert('The Perimeter is: ' + result)
+        }
+        if (choice == '3') {
+            var r = prompt('Enter the Radius.')
+            var result = 2 * 3.14 * Number(r)
+            alert('The Perimeter is: ' + result)
+        }
+        if (choice == '4') {
+            var h = prompt('Enter the Height.')
+            var b = prompt('Enter the corresponding Base.')
+            var result = 2 * (Number(h) + Number(b))
+            alert('The Perimeter is: ' + result)
+        }
+    </script>
+</body>
+
+</html>
