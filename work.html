@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html>
+<head></head>
 <body>
+<h2>JavaScript Palindrome Checking Function</h2>
 <script>
-var choice = prompt("Welcome to Area Calculator. \n Please Enter your Choice. \n1.Area of Rectangle. \n2.Area of Triangle. \n3.Area of Circle. \n4.Area of Parallelogram");
-if (choice == '1') {
-    var l = prompt('Enter the Length.')
-    var b = prompt('Enter the Breadth.')
-    var result = Number(l) * Number(b)
-    alert('The Area is: ' + result)
+function palindrome(myString) {
+    var input = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+    var reversedInput = input.split('').reverse().join('');
+    if (input === reversedInput){document.write("<div>" + myString + " is a Palindrome.</div>");}
+    else{document.write("<div>" + myString + " is not a Palindrome.</div>");}
 }
-if (choice == '2') {
-    var h = prompt('Enter the Height.')
-    var b = prompt('Enter the Base.')
-    var result = Number(h) * Number(b) / 2
-    alert('The Area is: ' + result)
-}
-if (choice == '3') {
-    var r = prompt('Enter the Radius.')
-    var result = 3.14 * Number(r) * Number(r)
-    alert('The Area is: ' + result)
-}
-if (choice == '4' ) {
-    var h = prompt('Enter the Height.')
-    var b = prompt('Enter the corresponding Base.')
-    var result = Number(h) * Number(b)
-    alert('The Area is: ' + result)
-}
+palindrome("Canada");
 </script>
 </body>
 </html>
