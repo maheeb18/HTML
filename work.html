@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+<title>To-Do List</title>
+</head>
 <body>
-<h2>JavaScript Palindrome Checking Function</h2>
-<script>
-function palindrome(myString) {
-    var input = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
-    var reversedInput = input.split('').reverse().join('');
-    if (input === reversedInput){document.write("<div>" + myString + " is a Palindrome.</div>");}
-    else{document.write("<div>" + myString + " is not a Palindrome.</div>");}
-}
-palindrome("Canada");
-</script>
+<h3>Add to your To-Do List here</h3>
+<form id="myForm">
+    <input id="myInput" type="text">
+    <button> Add </button>
+</form>
+<h3>To Do List</h3>
+<ul id="myItem"></ul>
 </body>
+<script>
+var myForm = document.getElementById("myForm");
+var myInput = document.getElementById("myInput");
+var myItem = document.getElementById("myItem");
+myForm.addEventListener("submit", function(event){
+    event.preventDefault();
+    createItem(myInput.value)
+})
+function createItem(inputItems){
+    var items = '<li>' + inputItems + '<button onclick="deleteItem(this)">Delete</button></li>';
+    myItem.insertAdjacentHTML('beforeend', items)
+    myInput.value = ""
+    myInput.focus()
+}
+function deleteItem(button) {
+    button.parentElement.remove();
+}
+</script>
 </html>
