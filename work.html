@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>To-Do List</title>
-</head>
 <body>
-<h3>Add to your To-Do List here</h3>
-<form id="myForm">
-    <input id="myInput" type="text">
-    <button> Add </button>
-</form>
-<h3>To Do List</h3>
-<ul id="myItem"></ul>
-</body>
+<div id="MyClockDisplay" onload="showTime()"></div>
 <script>
-var myForm = document.getElementById("myForm");
-var myInput = document.getElementById("myInput");
-var myItem = document.getElementById("myItem");
-myForm.addEventListener("submit", function(event){
-    event.preventDefault();
-    createItem(myInput.value)
-})
-function createItem(inputItems){
-    var items = '<li>' + inputItems + '<button onclick="deleteItem(this)">Delete</button></li>';
-    myItem.insertAdjacentHTML('beforeend', items)
-    myInput.value = ""
-    myInput.focus()
+function showTime() {
+var date = new Date();
+var h = date.getHours();
+var m = date.getMinutes();
+var s = date.getSeconds();
+var session = "AM";
+if(h == 0){
+    h = 12;
 }
-function deleteItem(button) {
-    button.parentElement.remove();
+if(h > 12){
+    h = h - 12;
+    session = "PM";
 }
+h = (h < 10) ? "0" + h : h;
+m = (m < 10) ? "0" + m : m;
+s = (s < 10) ? "0" + s : s;
+var time = h + ":" + m +":" + s + " " + session;
+document.getElementById("MyClockDisplay").innerText = time; 
+setTimeout(showTime, 1000);
+}
+showTime();
 </script>
+</body>
 </html>
