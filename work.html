@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+    body {
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+    }
+#dice {
+    font-size: 320px;
+}
+#dice.hover {
+    cursor: pointer;
+}
+</style>
+</head>
 <body>
-<div class="wrapper">
-<h1>Stopwatch</h1>
-<p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
-<button id="button-start">Start</button>
-<button id="button-stop">Stop</button>
-<button id="button-reset">Reset</button>
-</div>
+<div>Click on the dice...</div>
+<div id="dice" onclick="stopStart()"></div>
 <script>
-window.onload = function () {
-var seconds = 0;
-var milliseconds = 0;
-var appendMilliseconds = document.getElementById("milliseconds");
-var appendSeconds = document.getElementById("seconds");
-var buttonstart = document.getElementById("button-start");
-var buttonstop = document.getElementById("button-stop");
-var buttonreset = document.getElementById("button-reset");
-var Interval;
-buttonstart.onclick = function () {
-    clearInterval(Interval);
-    Interval = setInterval(startTimer, 10);
+var dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
+var stopped = true;
+function change() {
+    var random = Math.floor(Math.random() * 6);
+    dice.innerHTML = dices[random];
 }
-buttonstop.onclick = function() {
-    clearInterval(Interval);
-}
-buttonreset.onclick = function() {
-    clearInterval(Interval);
-    milliseconds
-}
+function stopStart() {
+    if (stopped) {
+        stopped = false;
+        t = setInterval(change, 100);
+    } else{
+        clearInterval(t);
+        stopped = true;
+    }
+} 
+window.onload = function() {
+    dice = document.getElementById("dice");
+    stopStart();
 }
 </script>
 </body>
