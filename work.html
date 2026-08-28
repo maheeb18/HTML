@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Websites</title>
+<style>
+
+</style>
+</head>
 <body>
-<section>
-<img class="mySlides" src="pic1.jpg" style="height:500px;">
-<img class="mySlides" src="pic2.jpg" style="height:500px;">
+<span class="border trans" style="font-size:40px;">
+<center>Welcome all to this website!</center>
+</span><br>
+<section class="section section-dark">
+<h2>Section One</h2>
+<p>Web development is the work involved in developing a Website.</p>
 </section>
-<script>
-var myIndex = 0;
-carousel();
-function carousel() {
-var i;
-var x = document.getElementsByClassName("mySlides");
-for (i = 0; i < x.length; i++) {
-x[i].style.display = "none";  
-}
-myIndex++;
-if (myIndex > x.length) {myIndex = 1}
-x[myIndex-1].style.display = "block";
-setTimeout(carousel, 2000);
-}
-</script>
+<div class="pimg3">
+<div class="ptext">
+<span class="bordertrans">Image Two Text</span>
+</div>
+</div>
 </body>
 </html>
